@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed82740c-2296-405f-bb40-7ed0bfbb5fc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/homework_2_part_1-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homework_2_part_1.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/homework_2_part_1-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/homework_2_part_1-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_2_part_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/homework_2_part_1.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600150185879</updated>
-      <workItem from="1600150187182" duration="1301000" />
+      <workItem from="1600150187182" duration="1691000" />
     </task>
     <task id="LOCAL-00001" summary="add initial code.">
       <created>1600150331954</created>
@@ -51,7 +50,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600150331954</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add initial code.">
+      <created>1600155115990</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600155115990</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -62,13 +68,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="add initial code." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="116" key="CommitChangelistDialog2" timestamp="1600150331293">
+    <state x="585" y="116" key="CommitChangelistDialog2" timestamp="1600155115358">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="116" key="CommitChangelistDialog2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600150331293" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1600150341897">
+    <state x="585" y="116" key="CommitChangelistDialog2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155115358" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1600155122282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600150341897" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155122282" />
   </component>
 </project>
