@@ -1,17 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ed82740c-2296-405f-bb40-7ed0bfbb5fc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/homework_2_part_1-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homework_2_part_1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="94aa9419-41af-4d26-a657-7d8b8cdb4644" />
   <component name="ProjectId" id="1hXGmvabZCE1fAEF3mTkncvCfPa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Opali\PycharmProjects\search_methods" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed82740c-2296-405f-bb40-7ed0bfbb5fc0" name="Default Changelist" comment="" />
+      <created>1600150185879</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600150185879</updated>
+      <workItem from="1600150187182" duration="1301000" />
+    </task>
+    <task id="LOCAL-00001" summary="add initial code.">
+      <created>1600150331954</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600150331954</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add initial code." />
+    <option name="LAST_COMMIT_MESSAGE" value="add initial code." />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1600150311799">
+    <state x="585" y="116" key="CommitChangelistDialog2" timestamp="1600150331293">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600150311799" />
+    <state x="585" y="116" key="CommitChangelistDialog2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600150331293" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1600150341897">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600150341897" />
   </component>
 </project>
