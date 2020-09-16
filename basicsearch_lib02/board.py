@@ -1,10 +1,11 @@
-
 import math
+
 
 class Board(object):
     """Grid board class
     Represent a two dimensional grid of items
     """
+
     def __init__(self, rows, cols, displaycol=9, empty_symbol='.'):
         """construct a board with specified rows and cols
         displaytab can be set to display the board with a specified
@@ -31,11 +32,11 @@ class Board(object):
     def get_rows(self):
         "get_rows - return number of rows"
         return self.rows
-    
+
     def get_cols(self):
         "get_cols - return number of columns"
         return self.cols
-    
+
     def __repr__(self):
         "return a representation of the board"
 
@@ -47,25 +48,25 @@ class Board(object):
         # Basic format syntax 
         #    { } specifies something to be replaced
         #    
-        
+
         # Generate format strings such that:
         # columns:
         #  digits will be converted to string (!s)
         #  column numbers will be centered (^)
-        colheader = "{!s:^%d}"%(self.displaycol)
+        colheader = "{!s:^%d}" % (self.displaycol)
         # number of digits needed for rows
         rowheadersz = int(math.ceil(self.rows / 10.0))
         # rows labels are right justified (>) with a trailing space
-        rowheader  = "{:>%dd} "%(rowheadersz) # right justified digit
-        
+        rowheader = "{:>%dd} " % (rowheadersz)  # right justified digit
+
         # force conversion to string !s and center in a field of
         # displaycol spaces.
-        colentry = "{!s:^%d}"%(self.displaycol)
+        colentry = "{!s:^%d}" % (self.displaycol)
         # Generate column labels
         lines.append(
             # leave space for row labels in subsequent rows
             # one space for each digit + space before row content
-            "".join([" " for _ in range(rowheadersz+1)]) +
+            "".join([" " for _ in range(rowheadersz + 1)]) +
             # column labels 
             "".join([colheader.format(idx) for idx in range(self.cols)]))
         # Generate board string
@@ -80,7 +81,3 @@ class Board(object):
             r = r + 1
         # concatenate list into a string
         return "\n".join(lines)
-
-        
-
-    

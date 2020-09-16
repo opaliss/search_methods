@@ -26,6 +26,7 @@ DepthFirst - depth first search
 Manhattan - city block heuristic search.  To restrict the complexity of
     this, you only need handle heuristics for puzzles with a single solution
     where the blank is in the center, e.g.:
+    #TODO: FIX TO BOTTOM RIGHT....
         123
         4 5
         678
@@ -44,12 +45,14 @@ class BreadthFirst:
         constrained such that the last edge of the search space
         moves from parentnode to childnode via the specified action
         """
+
         raise NotImplemented
     
     @classmethod
     def h(cls, searchnode):
-        "h - heuristic value"
-        raise NotImplemented
+        """h - heuristic value"""
+        # raise NotImplemented
+        return 0
 
 # To complete:
 # Write two more classes, DepthFirst and Manhattan

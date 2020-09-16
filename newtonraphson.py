@@ -1,14 +1,5 @@
-"""We the undersigned promise that we have in good faith attempted
-to follow the principles of pair programming. Although we were free to discuss
- ideas with others, the implementation is our own. We have shared a common workspace and
- taken turns at the keyboard for the majority of the work that we are submitting.
- Furthermore, any non programming portions of the assignment were done independently.
- We recognize that should this not be the case,
-we will be subject to penalties as outlined in the course syllabus.
-
-Coder #1: Opal Issan, 09/15/2020
-Coder #2: Mario, 09/15/2020
-"""
+""" In this module, there are Python subroutines to find the roots of a polynomial using
+Newton Raphson method. """
 
 
 def NewtonRaphson(fpoly, a, tolerance=.00001):
@@ -53,7 +44,7 @@ def derivative(fpoly):
      derivative((3,4,5)) # 3 * x**2 + 4 * x**1 + 5 * x**0
      returns: [6, 4] # 6 * x**1 + 4 * x**0
      """
-    dfdx = [None]*(len(fpoly)-1)
-    for ii in range(0, len(fpoly) -1):
-        dfdx[ii] = (len(fpoly)-1-ii)*fpoly[ii]
+    dfdx = [None] * (len(fpoly) - 1)
+    for ii in range(0, len(fpoly) - 1):
+        dfdx[ii] = (len(fpoly) - 1 - ii) * fpoly[ii]
     return dfdx

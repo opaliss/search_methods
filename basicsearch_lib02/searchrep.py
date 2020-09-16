@@ -9,9 +9,10 @@ Contains contributions from multiple authors
 
 '''
 
+
 def print_nodes(nodes):
     "print_nodes(nodes) - display a set of search nodes on the same line"
-    
+
     if len(nodes) > 0:
         nodereps = []  # string representation of each node
         linecounts = []  # lines in string representation
@@ -24,20 +25,19 @@ def print_nodes(nodes):
             # Make format string k characters wider than longest node line
             # Produces format for fixed length string field, e.g. %12s
             maxlinelen = max([len(l) for l in lines])
-            widthstr.append("%%%ds"%(maxlinelen+2))
+            widthstr.append("%%%ds" % (maxlinelen + 2))
             linecounts.append(len(lines))  # track # lines needed for node
             nodereps.append(lines)
-        
+
         for lineidx in range(max(linecounts)):
             for nodeidx in range(len(nodes)):
                 # Print out row of node representation and stay on same line
                 try:
-                    print(widthstr[nodeidx]%(nodereps[nodeidx][lineidx]), end='') 
+                    print(widthstr[nodeidx] % (nodereps[nodeidx][lineidx]), end='')
                 except IndexError:
                     # This node has fewer lines than the longest one
-                    print(widthstr[nodeidx]%" ", end='') 
-            print() # move to next line
-            
+                    print(widthstr[nodeidx] % " ", end='')
+            print()  # move to next line
 
 
 class Problem(object):
@@ -46,9 +46,9 @@ class Problem(object):
     __init__, goal_test, and path_cost. Then you will create instances
     of your subclass and solve them with the various search functions."""
 
-    def __init__(self, initial, goals=None, 
-                 g = lambda oldnode, action, newnode : oldnode.depth+1, 
-                 h = lambda newnode : 0):
+    def __init__(self, initial, goals=None,
+                 g=lambda oldnode, action, newnode: oldnode.depth + 1,
+                 h=lambda newnode: 0):
         """The constructor specifies the initial state, and one or
         more goal states if they are countable states (override goal_test to
         provide a suitable goal predicate if this is not the case).
@@ -63,25 +63,25 @@ class Problem(object):
         
         Your subclass's constructor can add other arguments.
         """
-        
+
         self.initial = initial  # store initial state
-        
+
         # store goal(s) as a list (make it a list if it is not)
         if goals != None:
             self.goals = goals if isinstance(goals, list) else list(goals)
         else:
             self.goals = []
-        
+
         # store function handles
         self.g = g
-        self.h = h 
+        self.h = h
 
     def actions(self, state):
         """Return the actions that can be executed in the given
         state. The result would typically be a list, but if there are
         many actions, consider yielding them one at a time in an
         iterator, rather than building them all at once."""
-        
+
         return state.get_actions()
 
     def result(self, state, action):
@@ -100,8 +100,8 @@ class Problem(object):
         """For optimization problems, each state has a value.  Hill-climbing
         and related algorithms try to maximize this value."""
         raise NotImplementedError
-    
-    
+
+
 # -----------------------------------------------------------------------------
 
 class Node:
@@ -118,7 +118,7 @@ class Node:
 
     def __init__(self, problem, state, parent=None, action=None):
         "Create a search tree Node, derived from a parent by an action."
-        self.problem = problem # Save problem representation
+        self.problem = problem  # Save problem representation
         self.state = state
         self.parent = parent
         self.action = action
@@ -137,7 +137,7 @@ class Node:
         self.h = problem.h(self)
         # Total cost of path
         self.f = self.g + self.h
-           
+
     def expand(self, problem):
         "List the nodes reachable in one step from this node."
         return [self.child_node(action)
@@ -169,19 +169,20 @@ class Node:
         # reverse to provide initial state to goal
         path.reverse()
         return path
-    
+
     def get_f(self):
         "get_f estimate of cost from initial node to goal node"
         return self.f
-    
+
     def get_g(self):
         "get_g estimate of cost form initial node to this node"
         return self.g
-    
+
     def get_h(self):
         "get_h estimate of cost from this node to closest goal"
-        return self.h    
-    # We want for a queue of nodes in breadth_first_search or
+        return self.h
+        # We want for a queue of nodes in breadth_first_search or
+
     # astar_search to have no duplicated states, so we treat nodes
     # with the same state as equal. [Problem: this may not be what you
     # want in other contexts.]
@@ -194,14 +195,9 @@ class Node:
 
     def __hash__(self):
         return hash(self.state)
-    
+
     def __repr__(self):
-        return "f=%.1f (g=%.1f + h=%.1f)\n%s"%(
-                self.f, self.g, self.h, self.state)
+        return "f=%.1f (g=%.1f + h=%.1f)\n%s" % (
+            self.f, self.g, self.h, self.state)
 
 # -----------------------------------------------------------------------------
-
-
-
-
-

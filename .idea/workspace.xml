@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed82740c-2296-405f-bb40-7ed0bfbb5fc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/newtonraphson.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework_2_part_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/homework_2_part_1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basicsearch_lib02/board.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicsearch_lib02/board.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basicsearch_lib02/searchrep.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicsearch_lib02/searchrep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newtonraphson.py" beforeDir="false" afterPath="$PROJECT_DIR$/newtonraphson.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npuzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/npuzzle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchstrategies.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchstrategies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tileboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/tileboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiledriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiledriver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600150185879</updated>
-      <workItem from="1600150187182" duration="4303000" />
+      <workItem from="1600150187182" duration="7172000" />
     </task>
     <task id="LOCAL-00001" summary="add initial code.">
       <created>1600150331954</created>
@@ -71,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600155399964</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add coding question #1.">
+      <created>1600236855168</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600236855168</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,17 +92,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add initial code." />
     <MESSAGE value="Add affidavit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add affidavit." />
+    <MESSAGE value="add coding question #1." />
+    <option name="LAST_COMMIT_MESSAGE" value="add coding question #1." />
   </component>
   <component name="WindowStateProjectService">
     <state x="97" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600235874897">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="97" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600235874897" />
-    <state x="975" y="169" key="CommitChangelistDialog2" timestamp="1600155399348">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="531" y="0" key="CommitChangelistDialog2" timestamp="1600236853837">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="975" y="169" key="CommitChangelistDialog2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155399348" />
+    <state x="531" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1600236853837" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1600155404783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -16,7 +16,7 @@ class NPuzzle(Problem):
         specified state instead of being generated randomly.
         
         The parent's class constructor is then called with the TileBoard
-        instance any any remaining arguments captured in **kwargs.        
+        instance any remaining arguments captured in **kwargs.
         
         """
         
