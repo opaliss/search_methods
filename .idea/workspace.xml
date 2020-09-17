@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ed82740c-2296-405f-bb40-7ed0bfbb5fc0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newton_unittest.py" beforeDir="false" afterPath="$PROJECT_DIR$/newton_unittest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/homework_2_part_1-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/homework_2_part_1-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_2_part_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/homework_2_part_1.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newtonraphson.py" beforeDir="false" afterPath="$PROJECT_DIR$/newtonraphson.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npuzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/npuzzle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searchstrategies.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchstrategies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiledriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiledriver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
       <recent name="C:\Users\Opali\PycharmProjects\search_methods" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.newton_unittest">
+  <component name="RunManager" selected="Python.tiledriver">
     <configuration name="newton_unittest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="search_methods" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -205,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600363152503</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add small changes to newtons method.">
+      <created>1600364466060</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1600364466060</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +231,8 @@
     <MESSAGE value="small changes." />
     <MESSAGE value="n has to be N-1. where sqrt(N) is int." />
     <MESSAGE value="Finished implementing newton's method and created a unitttest." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished implementing newton's method and created a unitttest." />
+    <MESSAGE value="add small changes to newtons method." />
+    <option name="LAST_COMMIT_MESSAGE" value="add small changes to newtons method." />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600361714902">
@@ -228,48 +240,63 @@
     </state>
     <state x="97" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600235874897" />
     <state x="360" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.990@0.23.1920.990" timestamp="1600361714902" />
-    <state x="797" y="23" key="CommitChangelistDialog2" timestamp="1600364398907">
+    <state x="97" y="273" key="#xdebugger.evaluate" timestamp="1600366649991">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state x="97" y="273" key="#xdebugger.evaluate/0.23.1920.990@0.23.1920.990" timestamp="1600366649991" />
+    <state x="797" y="23" key="CommitChangelistDialog2" timestamp="1600364465677">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="975" y="169" key="CommitChangelistDialog2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155399348" />
     <state x="531" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1600236853837" />
-    <state x="797" y="23" key="CommitChangelistDialog2/0.23.1920.990@0.23.1920.990" timestamp="1600364398907" />
-    <state width="1126" height="267" key="GridCell.Tab.0.bottom" timestamp="1600363960932">
+    <state x="797" y="23" key="CommitChangelistDialog2/0.23.1920.990@0.23.1920.990" timestamp="1600364465677" />
+    <state width="1126" height="267" key="GridCell.Tab.0.bottom" timestamp="1600369352043">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="267" key="GridCell.Tab.0.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600363960932" />
-    <state width="1126" height="267" key="GridCell.Tab.0.center" timestamp="1600363960931">
+    <state width="1126" height="267" key="GridCell.Tab.0.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600369352043" />
+    <state width="1126" height="267" key="GridCell.Tab.0.center" timestamp="1600369352042">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="267" key="GridCell.Tab.0.center/0.23.1920.990@0.23.1920.990" timestamp="1600363960931" />
-    <state width="1126" height="267" key="GridCell.Tab.0.left" timestamp="1600363960931">
+    <state width="1126" height="267" key="GridCell.Tab.0.center/0.23.1920.990@0.23.1920.990" timestamp="1600369352042" />
+    <state width="1126" height="267" key="GridCell.Tab.0.left" timestamp="1600369352041">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="267" key="GridCell.Tab.0.left/0.23.1920.990@0.23.1920.990" timestamp="1600363960931" />
-    <state width="1126" height="267" key="GridCell.Tab.0.right" timestamp="1600363960932">
+    <state width="1126" height="267" key="GridCell.Tab.0.left/0.23.1920.990@0.23.1920.990" timestamp="1600369352041" />
+    <state width="1126" height="267" key="GridCell.Tab.0.right" timestamp="1600369352043">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="267" key="GridCell.Tab.0.right/0.23.1920.990@0.23.1920.990" timestamp="1600363960932" />
-    <state width="1126" height="330" key="GridCell.Tab.1.bottom" timestamp="1600360196958">
+    <state width="1126" height="267" key="GridCell.Tab.0.right/0.23.1920.990@0.23.1920.990" timestamp="1600369352043" />
+    <state width="1126" height="330" key="GridCell.Tab.1.bottom" timestamp="1600367757162">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="330" key="GridCell.Tab.1.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600360196958" />
-    <state width="1126" height="330" key="GridCell.Tab.1.center" timestamp="1600360196958">
+    <state width="1126" height="330" key="GridCell.Tab.1.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600367757162" />
+    <state width="1126" height="330" key="GridCell.Tab.1.center" timestamp="1600367757161">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="330" key="GridCell.Tab.1.center/0.23.1920.990@0.23.1920.990" timestamp="1600360196958" />
-    <state width="1126" height="330" key="GridCell.Tab.1.left" timestamp="1600360196957">
+    <state width="1126" height="330" key="GridCell.Tab.1.center/0.23.1920.990@0.23.1920.990" timestamp="1600367757161" />
+    <state width="1126" height="330" key="GridCell.Tab.1.left" timestamp="1600367757160">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="330" key="GridCell.Tab.1.left/0.23.1920.990@0.23.1920.990" timestamp="1600360196957" />
-    <state width="1126" height="330" key="GridCell.Tab.1.right" timestamp="1600360196958">
+    <state width="1126" height="330" key="GridCell.Tab.1.left/0.23.1920.990@0.23.1920.990" timestamp="1600367757160" />
+    <state width="1126" height="330" key="GridCell.Tab.1.right" timestamp="1600367757161">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="330" key="GridCell.Tab.1.right/0.23.1920.990@0.23.1920.990" timestamp="1600360196958" />
-    <state x="552" y="263" key="Vcs.Push.Dialog.v2" timestamp="1600322679360">
+    <state width="1126" height="330" key="GridCell.Tab.1.right/0.23.1920.990@0.23.1920.990" timestamp="1600367757161" />
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2" timestamp="1600364514789">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155404783" />
-    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.23.1920.990@0.23.1920.990" timestamp="1600322679360" />
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.23.1920.990@0.23.1920.990" timestamp="1600364514789" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/npuzzle.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

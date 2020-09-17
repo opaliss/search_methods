@@ -40,7 +40,8 @@ from basicsearch_lib02.searchrep import Node
 
 
 class BreadthFirst:
-    "BreadthFirst - breadth first search"
+    """BreadthFirst - breadth first searcH
+    ∀𝑛 𝑔′(𝑛) = depth(n) and h′(n)=k (k=0)"""
 
     @classmethod
     def g(cls, parentnode, action, childnode):
@@ -54,11 +55,12 @@ class BreadthFirst:
     @classmethod
     def h(cls, searchnode):
         """h - heuristic value"""
-        return
+        return 0
 
 
 class DepthFirst:
-    """DepthFirst - depth first search"""
+    """DepthFirst - depth first search
+    ∀𝑛 𝑔′(𝑛) = k and h′(n)=−depth(n) (k=0)"""
 
     @classmethod
     def g(cls, parentnode, action, childnode):
@@ -66,7 +68,7 @@ class DepthFirst:
         constrained such that the last edge of the search space
         moves from parentnode to childnode via the specified action
         """
-        return 1 + parentnode.depth
+        return -(BreadthFirst.g(parentnode, action, childnode))
 
     @classmethod
     def h(cls, searchnode):
@@ -83,7 +85,7 @@ class Manhattan:
         constrained such that the last edge of the search space
         moves from parentnode to childnode via the specified action
         """
-        return 2*(parentnode.depth+1)
+        return BreadthFirst.g(parentnode, action, childnode)
 
     @classmethod
     def h(cls, searchnode):

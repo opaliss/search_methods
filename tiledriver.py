@@ -21,14 +21,15 @@ from tileboard import TileBoard
 from basicsearch_lib02.timer import Timer
 from searchstrategies import (BreadthFirst, DepthFirst, Manhattan)
 from problemsearch import graph_search
+from basicsearch_lib02.searchrep import *
 import collections
 
 
 def driver(n, force_state=False):
     """
     # TODO OPAL:
-                * newtonraphson.py.
-                * Double check g,h BFS, DFS, A*. + TEST.
+                * newtonraphson.py. - DONE.
+                * Double check g,h BFS, DFS, A*. + TEST. -DONE.
 
     # TODO TOGETHER: STEP 2.
                 * problemsearch.py
@@ -41,10 +42,10 @@ def driver(n, force_state=False):
 
     step 1: create 31 puzzles. for now: create 1.
         input :
-            * n - where sqrt(n) = int. - create a function to make sure this holds.
+            * n - where sqrt(n) = int. - create a function to make sure this holds. -DONE
             * what is the range of n?
             * get 31 n values from random generator.
-            * check if board is solvable. TileBoard.solvable()
+            * check if board is solvable. TileBoard.solvable() -DONE
 
     step 2: solve the puzzle using BFS. Later on: DFS, A*.
             * TODO: EDIT THE MOST IMPORTANT FILE: graph_search.
@@ -78,9 +79,14 @@ def driver(n, force_state=False):
     2. When implementing always add debug param and verbose to print behind the scenes.
     """
     if check_valid_n(n):
-        problem = NPuzzle(n=n)
+        initial_state = NPuzzle(n=n)
+        if initial_state.solvable:
+            print(initial_state)
+            print("Is the state solved?", initial_state.solved())
+        else:
+            print("initial state is unsolvable. ")
     else:
-        print("n is not valid. ")
+        print("n is not valid.")
 
 
 def check_valid_n(n):
@@ -91,4 +97,4 @@ def check_valid_n(n):
 
 
 if __name__ == "__main__":
-    driver(n=8)
+    driver(n=3)

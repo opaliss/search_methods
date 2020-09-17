@@ -31,7 +31,7 @@ def NewtonRaphson(fpoly, a, tolerance=1e-05, more_info=False):
                 # TODO: ASK THE PROFESSOR WHAT TO DO WHEN DFDX = 0
                 x = x - polyval(fpoly, x) / polyval(df, x)
             else:
-                print("Newton methid failed, dfdx=0")
+                print("Newton method failed, dfdx=0")
             ii += 1
 
         if more_info:  # return more information about the iterative calculation.
