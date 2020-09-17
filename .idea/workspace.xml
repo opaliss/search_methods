@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed82740c-2296-405f-bb40-7ed0bfbb5fc0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tiledriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiledriver.py" afterDir="false" />
+    <list default="true" id="ed82740c-2296-405f-bb40-7ed0bfbb5fc0" name="Default Changelist" comment="n has to be N-1. where sqrt(N) is int.">
+      <change afterPath="$PROJECT_DIR$/newton_unittest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_2_part_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/homework_2_part_1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newtonraphson.py" beforeDir="false" afterPath="$PROJECT_DIR$/newtonraphson.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,49 @@
       <recent name="C:\Users\Opali\PycharmProjects\search_methods" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tiledriver">
+  <component name="RunManager" selected="Python.newton_unittest">
+    <configuration name="newton_unittest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="search_methods" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/envs/search_methods/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newton_unittest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="newtonraphson" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="search_methods" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/envs/search_methods/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newtonraphson.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="searchstrategies" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="search_methods" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,6 +127,8 @@
     <list>
       <item itemvalue="Python.searchstrategies" />
       <item itemvalue="Python.tiledriver" />
+      <item itemvalue="Python.newtonraphson" />
+      <item itemvalue="Python.newton_unittest" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -145,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600322274180</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="n has to be N-1. where sqrt(N) is int.">
+      <created>1600322670577</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600322670577</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,56 +212,57 @@
     <MESSAGE value="meeting 16/9." />
     <MESSAGE value="added comments on todo list." />
     <MESSAGE value="small changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="small changes." />
+    <MESSAGE value="n has to be N-1. where sqrt(N) is int." />
+    <option name="LAST_COMMIT_MESSAGE" value="n has to be N-1. where sqrt(N) is int." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600313137870">
+    <state x="360" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600361714902">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="97" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600235874897" />
-    <state x="0" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.990@0.23.1920.990" timestamp="1600313137870" />
-    <state x="797" y="23" key="CommitChangelistDialog2" timestamp="1600322273844">
+    <state x="360" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.990@0.23.1920.990" timestamp="1600361714902" />
+    <state x="797" y="23" key="CommitChangelistDialog2" timestamp="1600322675082">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="975" y="169" key="CommitChangelistDialog2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155399348" />
     <state x="531" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1600236853837" />
-    <state x="797" y="23" key="CommitChangelistDialog2/0.23.1920.990@0.23.1920.990" timestamp="1600322273844" />
-    <state width="1126" height="267" key="GridCell.Tab.0.bottom" timestamp="1600322625855">
+    <state x="797" y="23" key="CommitChangelistDialog2/0.23.1920.990@0.23.1920.990" timestamp="1600322675082" />
+    <state width="1126" height="267" key="GridCell.Tab.0.bottom" timestamp="1600363095458">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="267" key="GridCell.Tab.0.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600322625855" />
-    <state width="1126" height="267" key="GridCell.Tab.0.center" timestamp="1600322625854">
+    <state width="1126" height="267" key="GridCell.Tab.0.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600363095458" />
+    <state width="1126" height="267" key="GridCell.Tab.0.center" timestamp="1600363095457">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="267" key="GridCell.Tab.0.center/0.23.1920.990@0.23.1920.990" timestamp="1600322625854" />
-    <state width="1126" height="267" key="GridCell.Tab.0.left" timestamp="1600322625854">
+    <state width="1126" height="267" key="GridCell.Tab.0.center/0.23.1920.990@0.23.1920.990" timestamp="1600363095457" />
+    <state width="1126" height="267" key="GridCell.Tab.0.left" timestamp="1600363095456">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="267" key="GridCell.Tab.0.left/0.23.1920.990@0.23.1920.990" timestamp="1600322625854" />
-    <state width="1126" height="267" key="GridCell.Tab.0.right" timestamp="1600322625855">
+    <state width="1126" height="267" key="GridCell.Tab.0.left/0.23.1920.990@0.23.1920.990" timestamp="1600363095456" />
+    <state width="1126" height="267" key="GridCell.Tab.0.right" timestamp="1600363095457">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="1126" height="267" key="GridCell.Tab.0.right/0.23.1920.990@0.23.1920.990" timestamp="1600322625855" />
-    <state width="953" height="330" key="GridCell.Tab.1.bottom" timestamp="1600313328369">
+    <state width="1126" height="267" key="GridCell.Tab.0.right/0.23.1920.990@0.23.1920.990" timestamp="1600363095457" />
+    <state width="1126" height="330" key="GridCell.Tab.1.bottom" timestamp="1600360196958">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="953" height="330" key="GridCell.Tab.1.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600313328369" />
-    <state width="953" height="330" key="GridCell.Tab.1.center" timestamp="1600313328368">
+    <state width="1126" height="330" key="GridCell.Tab.1.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600360196958" />
+    <state width="1126" height="330" key="GridCell.Tab.1.center" timestamp="1600360196958">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="953" height="330" key="GridCell.Tab.1.center/0.23.1920.990@0.23.1920.990" timestamp="1600313328368" />
-    <state width="953" height="330" key="GridCell.Tab.1.left" timestamp="1600313328368">
+    <state width="1126" height="330" key="GridCell.Tab.1.center/0.23.1920.990@0.23.1920.990" timestamp="1600360196958" />
+    <state width="1126" height="330" key="GridCell.Tab.1.left" timestamp="1600360196957">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="953" height="330" key="GridCell.Tab.1.left/0.23.1920.990@0.23.1920.990" timestamp="1600313328368" />
-    <state width="953" height="330" key="GridCell.Tab.1.right" timestamp="1600313328368">
+    <state width="1126" height="330" key="GridCell.Tab.1.left/0.23.1920.990@0.23.1920.990" timestamp="1600360196957" />
+    <state width="1126" height="330" key="GridCell.Tab.1.right" timestamp="1600360196958">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
-    <state width="953" height="330" key="GridCell.Tab.1.right/0.23.1920.990@0.23.1920.990" timestamp="1600313328368" />
-    <state x="552" y="263" key="Vcs.Push.Dialog.v2" timestamp="1600322278900">
+    <state width="1126" height="330" key="GridCell.Tab.1.right/0.23.1920.990@0.23.1920.990" timestamp="1600360196958" />
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2" timestamp="1600322679360">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155404783" />
-    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.23.1920.990@0.23.1920.990" timestamp="1600322278900" />
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.23.1920.990@0.23.1920.990" timestamp="1600322679360" />
   </component>
 </project>
