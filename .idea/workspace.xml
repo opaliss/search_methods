@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed82740c-2296-405f-bb40-7ed0bfbb5fc0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/search_methods.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/search_methods.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basicsearch_lib02/board.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicsearch_lib02/board.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basicsearch_lib02/searchrep.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicsearch_lib02/searchrep.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newtonraphson.py" beforeDir="false" afterPath="$PROJECT_DIR$/newtonraphson.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npuzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/npuzzle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/explored.py" beforeDir="false" afterPath="$PROJECT_DIR$/explored.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework_2_part_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/homework_2_part_1.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchstrategies.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchstrategies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tileboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/tileboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tiledriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiledriver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +41,29 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Opali\PycharmProjects\search_methods" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="searchstrategies" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="search_methods" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/envs/search_methods/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/searchstrategies.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -96,10 +118,11 @@
     <option name="LAST_COMMIT_MESSAGE" value="add coding question #1." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="97" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600235874897">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="389" y="256" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600311441653">
+      <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="97" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600235874897" />
+    <state x="389" y="256" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.990@0.23.1920.990" timestamp="1600311441653" />
     <state x="531" y="0" key="CommitChangelistDialog2" timestamp="1600236853837">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

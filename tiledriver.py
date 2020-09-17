@@ -8,7 +8,7 @@ We recognize that should this not be the case,
 we will be subject to penalties as outlined in the course syllabus.
 
 Pair Programmer #1: Opal Issan, 09/15/2020
-Pair Programmer #2: Mario, 09/15/2020
+Pair Programmer #2: Mario Inzunza, 09/15/2020
 
 driver for graph search problem
 
