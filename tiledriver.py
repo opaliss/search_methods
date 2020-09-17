@@ -24,12 +24,12 @@ from problemsearch import graph_search
 import collections
 
 
-def Driver(n, force_state=False):
+def driver(n, force_state=False):
     """
     # TODO OPAL:
                 * newtonraphson.py.
-                * step 1.
                 * Double check g,h BFS, DFS, A*. + TEST.
+
     # TODO TOGETHER: STEP 2.
                 * problemsearch.py
                 * npuzzle.py
@@ -37,6 +37,7 @@ def Driver(n, force_state=False):
     # TODO MARIO:
                 * step 3 - not yet ready.. tbd.
                 * outline step 2.
+                * step 1.
 
     step 1: create 31 puzzles. for now: create 1.
         input :
@@ -90,4 +91,4 @@ def check_valid_n(n):
 
 
 if __name__ == "__main__":
-    Driver(n=9)
+    driver(n=9)
