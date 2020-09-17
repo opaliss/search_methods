@@ -84,11 +84,11 @@ def driver(n, force_state=False):
 
 
 def check_valid_n(n):
-    if math.sqrt(n) == int:
+    if math.sqrt(n+1).is_integer():
         return True
     else:
         return False
 
 
 if __name__ == "__main__":
-    driver(n=9)
+    driver(n=8)
