@@ -22,20 +22,22 @@ def NewtonRaphson(fpoly, a, tolerance=1e-05, more_info=False):
         x1 = x - f(x)/dfdx(x)
         x = x1
     """
-    x = a
-    df = derivative(fpoly)
-    ii = 0
-    while abs(polyval(fpoly, x)) > tolerance:
-        if polyval(df, x) != 0:
-            x = x - polyval(fpoly, x) / polyval(df, x)
-        else:
-            x = x - polyval(fpoly, x) / 1
-        ii += 1
+    if check_poly_is_valid(fpoly):
+        x = a
+        df = derivative(fpoly)  # the derivative of the polynomial.
+        ii = 0  # keep track of the number of iterations.
+        while abs(polyval(fpoly, x)) > tolerance:
+            if polyval(df, x) != 0:
+                # TODO: ASK THE PROFESSOR WHAT TO DO WHEN DFDX = 0
+                x = x - polyval(fpoly, x) / polyval(df, x)
+            else:
+                print("Newton methid failed, dfdx=0")
+            ii += 1
 
-    if more_info: # return more information about the iterative calculation.
-        return x,  polyval(fpoly, x), ii
-    else:
-        return x
+        if more_info:  # return more information about the iterative calculation.
+            return x,  polyval(fpoly, x), ii
+        else:
+            return x
 
 
 def polyval(fpoly, x):
@@ -78,7 +80,7 @@ def check_poly_is_valid(fpoly):
     elif fpoly is ():
         print("fpoly is an empty tuple. ")
         return False
-    elif not any(not isinstance(y, (int, float)) for y in fpoly):
+    elif not any(isinstance(y, (int, float)) for y in fpoly):
         print("All elements in fpoly need to be type int or float.")
     else:
         return True
