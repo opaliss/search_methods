@@ -21,7 +21,9 @@ def graph_search(problem, verbose=False, debug=False):
         Number of moves to solution
         List of moves and resulting puzzle states
         Example:
-        
+
+         # TODO BEWARE: [Y,X], Y is flipped.
+
             Solution in 25 moves        
             Initial state
                   0        1        2    

@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed82740c-2296-405f-bb40-7ed0bfbb5fc0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/search_methods.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/search_methods.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/explored.py" beforeDir="false" afterPath="$PROJECT_DIR$/explored.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework_2_part_1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/homework_2_part_1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/searchstrategies.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchstrategies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npuzzle.py" beforeDir="false" afterPath="$PROJECT_DIR$/npuzzle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problemsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/problemsearch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tiledriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiledriver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +39,7 @@
       <recent name="C:\Users\Opali\PycharmProjects\search_methods" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.tiledriver">
     <configuration name="searchstrategies" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="search_methods" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,6 +61,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tiledriver" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="search_methods" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/envs/search_methods/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tiledriver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.searchstrategies" />
+      <item itemvalue="Python.tiledriver" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -105,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600236855168</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="meeting 16/9.">
+      <created>1600311925472</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600311925545</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,22 +144,57 @@
     <MESSAGE value="add initial code." />
     <MESSAGE value="Add affidavit." />
     <MESSAGE value="add coding question #1." />
-    <option name="LAST_COMMIT_MESSAGE" value="add coding question #1." />
+    <MESSAGE value="meeting 16/9." />
+    <option name="LAST_COMMIT_MESSAGE" value="meeting 16/9." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="389" y="256" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600311441653">
+    <state x="0" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600313137870">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="97" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1600235874897" />
-    <state x="389" y="256" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.990@0.23.1920.990" timestamp="1600311441653" />
-    <state x="531" y="0" key="CommitChangelistDialog2" timestamp="1600236853837">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="0" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.990@0.23.1920.990" timestamp="1600313137870" />
+    <state x="797" y="23" key="CommitChangelistDialog2" timestamp="1600311923060">
+      <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="975" y="169" key="CommitChangelistDialog2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155399348" />
     <state x="531" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1600236853837" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1600155404783">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="797" y="23" key="CommitChangelistDialog2/0.23.1920.990@0.23.1920.990" timestamp="1600311923060" />
+    <state width="953" height="330" key="GridCell.Tab.0.bottom" timestamp="1600313328367">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state width="953" height="330" key="GridCell.Tab.0.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600313328367" />
+    <state width="953" height="330" key="GridCell.Tab.0.center" timestamp="1600313328367">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state width="953" height="330" key="GridCell.Tab.0.center/0.23.1920.990@0.23.1920.990" timestamp="1600313328367" />
+    <state width="953" height="330" key="GridCell.Tab.0.left" timestamp="1600313328366">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state width="953" height="330" key="GridCell.Tab.0.left/0.23.1920.990@0.23.1920.990" timestamp="1600313328366" />
+    <state width="953" height="330" key="GridCell.Tab.0.right" timestamp="1600313328367">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state width="953" height="330" key="GridCell.Tab.0.right/0.23.1920.990@0.23.1920.990" timestamp="1600313328367" />
+    <state width="953" height="330" key="GridCell.Tab.1.bottom" timestamp="1600313328369">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state width="953" height="330" key="GridCell.Tab.1.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600313328369" />
+    <state width="953" height="330" key="GridCell.Tab.1.center" timestamp="1600313328368">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state width="953" height="330" key="GridCell.Tab.1.center/0.23.1920.990@0.23.1920.990" timestamp="1600313328368" />
+    <state width="953" height="330" key="GridCell.Tab.1.left" timestamp="1600313328368">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state width="953" height="330" key="GridCell.Tab.1.left/0.23.1920.990@0.23.1920.990" timestamp="1600313328368" />
+    <state width="953" height="330" key="GridCell.Tab.1.right" timestamp="1600313328368">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state width="953" height="330" key="GridCell.Tab.1.right/0.23.1920.990@0.23.1920.990" timestamp="1600313328368" />
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2" timestamp="1600311931381">
+      <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155404783" />
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.23.1920.990@0.23.1920.990" timestamp="1600311931381" />
   </component>
 </project>

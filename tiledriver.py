@@ -15,7 +15,7 @@ driver for graph search problem
 """
 
 from statistics import (mean, stdev)  # Only available in Python 3.4 and newer
-
+import math
 from npuzzle import NPuzzle
 from tileboard import TileBoard
 from basicsearch_lib02.timer import Timer
@@ -24,7 +24,70 @@ from problemsearch import graph_search
 import collections
 
 
-def driver():
-    raise NotImplemented
+def Driver(n, force_state=False):
+    """
+    # TODO OPAL:
+                * newtonraphson.py.
+                * step 1.
+                * Double check g,h BFS, DFS, A*. + TEST.
+    # TODO TOGETHER: STEP 2.
+                * problemsearch.py
+                * npuzzle.py
 
-# To do:  Run driver() if this is the entry module
+    # TODO MARIO:
+                * step 3 - not yet ready.. tbd.
+                * outline step 2.
+
+    step 1: create 31 puzzles. for now: create 1.
+        input :
+            * n - where sqrt(n) = int. - create a function to make sure this holds.
+            * what is the range of n?
+            * get 31 n values from random generator.
+            * check if board is solvable. TileBoard.solvable()
+
+    step 2: solve the puzzle using BFS. Later on: DFS, A*.
+            * TODO: EDIT THE MOST IMPORTANT FILE: graph_search.
+            * verbose: make our lives better. print the current state in a human readable way.
+            * time the calculation.
+            * record the length/ depth.
+            * record the number of nodes expanded.
+            * return the tuple of graph_search and save it for step 3.
+
+    step 3: save solutions in log.txt file. (Mario)
+            Solution includes:
+            * length of plan (DEPTH.)
+            * number of nodes expanded (number of states explored?)
+            * time running.
+
+
+    # TODO: QUESTIONS FOR PROFESSOR ROCH:
+    1. Is n = 16 always?
+    2. Can you explain the comments in graph_search? why are there repeated numbers?
+     do we need to account for this?
+    3. Is there a range for n? if so, what is it?
+    4. What is the empty space and period in graph_search comments?
+    5. Is coordinate system in graph_search comments correct?
+
+    # TODO: COMMENTS TO SELF:
+    1. force_state is great for debugging.
+    2. Beware of the coordinate system used in graph_search.
+
+    # TODO: TESTING:
+    1. first, test for n = 4.
+    2. When implementing always add debug param and verbose to print behind the scenes.
+    """
+    if check_valid_n(n):
+        problem = NPuzzle(n=n)
+    else:
+        print("n is not valid. ")
+
+
+def check_valid_n(n):
+    if math.sqrt(n) == int:
+        return True
+    else:
+        return False
+
+
+if __name__ == "__main__":
+    Driver(n=9)

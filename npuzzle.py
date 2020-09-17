@@ -1,13 +1,13 @@
-
-
 from basicsearch_lib02.tileboard import TileBoard
 from basicsearch_lib02.searchrep import Problem
+
 
 class NPuzzle(Problem):
     """
     NPuzzle - Problem representation for an N-tile puzzle
     Provides implementations for Problem actions specific to N tile puzzles.
     """
+
     def __init__(self, n, force_state=None, **kwargs):
         """"__init__(n, force_state, **kwargs)
         
@@ -19,7 +19,7 @@ class NPuzzle(Problem):
         instance any remaining arguments captured in **kwargs.
         
         """
-        
+        self.board = TileBoard(n=n)
         # Note on **kwargs:
         # **kwargs is Python construct that captures any remaining arguments 
         # into a dictionary.  The dictionary can be accessed like any other 
@@ -28,24 +28,14 @@ class NPuzzle(Problem):
         #    e.g. foobar(arg1, arg2, …, argn, **kwargs).
 
         raise NotImplemented
-        
+
     def actions(self, state):
         "actions(state) - find a set of actions applicable to specified state"
 
-        raise NotImplemented
-    
     def result(self, state, action):
         "result(state, action)- apply action to state and return new state"
+        return TileBoard.move(self=state, offset=action)
 
-        raise NotImplemented
-    
     def goal_test(self, state):
         "goal_test(state) - Is state a goal?"
-
-        raise NotImplemented
-
-    
-        
-
-
-
+        return TileBoard.solved(self=state)
