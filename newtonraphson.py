@@ -28,7 +28,6 @@ def NewtonRaphson(fpoly, a, tolerance=1e-05, more_info=False):
         ii = 0  # keep track of the number of iterations.
         while abs(polyval(fpoly, x)) > tolerance:
             if polyval(df, x) != 0:
-                # TODO: ASK THE PROFESSOR WHAT TO DO WHEN DFDX = 0
                 x = x - polyval(fpoly, x) / polyval(df, x)
             else:
                 print("Newton method failed, dfdx=0")
@@ -88,7 +87,7 @@ def check_poly_is_valid(fpoly):
 
 if __name__ == "__main__":
     fpoly = [2, 1, 2, 3]
-    a = complex(0, 1)
+    a = 1
     print("f(-1) = ", polyval(fpoly, -1))
     print("f(0) = ", polyval(fpoly, 0))
     print("f(1) = ", polyval(fpoly, 1))
