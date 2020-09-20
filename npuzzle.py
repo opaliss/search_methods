@@ -1,5 +1,6 @@
 from basicsearch_lib02.tileboard import TileBoard
 from basicsearch_lib02.searchrep import Problem
+from searchstrategies import *
 import math
 
 
@@ -29,6 +30,8 @@ class NPuzzle(Problem):
         self.n_side = int(math.sqrt((n + 1)))
         self.initial_state = TileBoard(n=n)
         self.solvable = self.initial_state.solvable
+        self.h = BreadthFirst.h
+        self.g = BreadthFirst.g
 
     def actions(self, state):
         "actions(state) - find a set of actions applicable to specified state"
@@ -40,12 +43,11 @@ class NPuzzle(Problem):
 
     def goal_test(self, state):
         "goal_test(state) - Is state a goal?"
-        return state.solved()
+        return TileBoard.solved(state)
 
     def __str__(self):
-        state = self.initial_state.state_tuple()
-        string = str(state[: self.n_side])
+        string = str(self.initial_state.state_tuple()[: self.n_side])
         for ii in range(1, self.n_side):
             string += "\n"
-            string += str(state[ii * self.n_side: (ii + 1) * self.n_side])
+            string += str(self.initial_state.state_tuple()[ii * self.n_side: (ii + 1) * self.n_side])
         return string

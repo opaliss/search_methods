@@ -5,9 +5,9 @@ problemsearch - Functions for seaarching.
 from basicsearch_lib02.searchrep import (Node, print_nodes)
 from basicsearch_lib02.queues import PriorityQueue
 from basicsearch_lib02.timer import Timer
-
+from basicsearch_lib02.tileboard import TileBoard
 from explored import Explored
-    
+from searchstrategies import BreadthFirst, DepthFirst, Manhattan
        
 def graph_search(problem, verbose=False, debug=False):
     """graph_search(problem, verbose, debug) - Given a problem representation
@@ -72,7 +72,42 @@ def graph_search(problem, verbose=False, debug=False):
     path - list of actions to solve the problem or None if no solution was found
     nodes_explored - Number of nodes explored (dequeued from frontier)
     elapsed_s is the elapsed wall clock time performing the search
-    """
 
-    raise NotImplemented
-    
+
+    while:
+    node
+    for each action of node:
+
+    """
+    initial_state = problem.initial_state
+    set_explored = Explored()
+    queue_nodes = PriorityQueue()
+    queue_nodes.f = lambda child_node: BreadthFirst.g(child_node) + BreadthFirst.h(child_node)
+    queue_nodes.append(item=Node(problem=problem, state=initial_state, parent=None, action=None))
+
+    while True:
+        # check if queue is empty
+        if len(queue_nodes) == 0:
+            # failure to find a solution.
+            return False
+        # current node
+        current_node = queue_nodes.pop()
+        if verbose:
+            print(current_node.state)
+        # add node state to explored.
+        set_explored.add(current_node.state)
+        #  check for all valid moves:
+        for action in TileBoard.get_actions(current_node.state):
+            # action [y, x]
+            child = current_node.state.move(offset=action)
+            # if child is not explored then add to frontier.
+            if set_explored.exists(child) is False:
+                set_explored.add(child)
+                # add to queue.
+                added_to_queue = Node(problem=problem, state=child, parent=current_node, action=action)
+                queue_nodes.append(item=added_to_queue)
+                if problem.goal_test(child):
+                    if verbose:
+                        print("child = ")
+                        print(child)
+                    return child

@@ -44,12 +44,12 @@ class BreadthFirst:
     ∀𝑛 𝑔′(𝑛) = depth(n) and h′(n)=k (k=0)"""
 
     @classmethod
-    def g(cls, parentnode, action, childnode):
+    def g(cls, childnode):
         """"g - cost from initial state to childnode
         constrained such that the last edge of the search space
         moves from parentnode to childnode via the specified action
         """
-        return 1 + parentnode.depth
+        return childnode.depth
 
 
     @classmethod
@@ -63,12 +63,12 @@ class DepthFirst:
     ∀𝑛 𝑔′(𝑛) = k and h′(n)=−depth(n) (k=0)"""
 
     @classmethod
-    def g(cls, parentnode, action, childnode):
+    def g(cls, parentnode):
         """"g - cost from initial state to childnode
         constrained such that the last edge of the search space
         moves from parentnode to childnode via the specified action
         """
-        return -(BreadthFirst.g(parentnode, action, childnode))
+        return -(BreadthFirst.g(parentnode))
 
     @classmethod
     def h(cls, searchnode):
@@ -80,27 +80,27 @@ class Manhattan:
     """Manhattan - A* heuristic with manhattan distance, and a cost of 2. """
 
     @classmethod
-    def g(cls, parentnode, action, childnode):
+    def g(cls, parentnode):
         """"g - cost from initial state to childnode
         constrained such that the last edge of the search space
         moves from parentnode to childnode via the specified action
         """
-        return BreadthFirst.g(parentnode, action, childnode)
+        return BreadthFirst.g(parentnode)
 
     @classmethod
-    def h(cls, searchnode):
+    def h(cls, child_state):
         """h - heuristic value. Manhattan distance. The sum of distance of each tile from
         it's goal position.
         # TODO: make sure searchnode.state is a tuple/list. ex: [2,1,3,6,4,5,7,.,8]
         # TODO: Here I assume searchnode is an object of Node class. """
         diff = 0
-        for ii in range(0, len(searchnode.state)):
-            if searchnode.state[ii] != '.':
+        for ii in range(0, len(child_state.state)):
+            if child_state.state[ii] != '.':
                 """ find the manhattan distance to the correct location. """
-                N = len(searchnode.state)
+                N = len(child_state.state)
                 N_side = math.sqrt(N)
-                x_true = searchnode.state[ii] % N_side
-                y_true = math.floor(((searchnode.state[ii]-1)/N_side)) + 1
+                x_true = child_state.state[ii] % N_side
+                y_true = math.floor(((child_state.state[ii] - 1) / N_side)) + 1
                 x_curr = (ii+1) % N_side
                 y_curr = math.floor((ii/N_side)) + 1
 

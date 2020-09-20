@@ -17,6 +17,7 @@ driver for graph search problem
 from statistics import (mean, stdev)  # Only available in Python 3.4 and newer
 import math
 from npuzzle import NPuzzle
+import random
 from tileboard import TileBoard
 from basicsearch_lib02.timer import Timer
 from searchstrategies import (BreadthFirst, DepthFirst, Manhattan)
@@ -78,15 +79,23 @@ def driver(n, force_state=False):
     1. first, test for n = 4.
     2. When implementing always add debug param and verbose to print behind the scenes.
     """
-    if check_valid_n(n):
-        initial_state = NPuzzle(n=n)
-        if initial_state.solvable:
-            print(initial_state)
-            print("Is the state solved?", initial_state.solved())
+
+    # Generate 31 puzzles with 4, 9, or 16 squares
+    games = []
+    for _ in range(n):
+        board_height = random.randint(2, 4)
+        game_size = board_height ** 2 - 1
+        if check_valid_n(game_size):
+            problem = NPuzzle(n=game_size)
+            if problem.solvable:
+                print(problem)
+                print("Is the state solved?", problem.goal_test(problem.initial_state))
+                games.append(TileBoard(game_size))
+                graph_search(problem=problem, debug=True, verbose=True)
+            else:
+                print("initial state is unsolvable. ")
         else:
-            print("initial state is unsolvable. ")
-    else:
-        print("n is not valid.")
+            print("n is not valid.")
 
 
 def check_valid_n(n):
@@ -97,4 +106,4 @@ def check_valid_n(n):
 
 
 if __name__ == "__main__":
-    driver(n=3)
+    driver(n=1)
