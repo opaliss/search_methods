@@ -7,8 +7,10 @@ from basicsearch_lib02.queues import PriorityQueue
 from basicsearch_lib02.timer import Timer
 from basicsearch_lib02.tileboard import TileBoard
 from explored import Explored
+import math
 from searchstrategies import BreadthFirst, DepthFirst, Manhattan
-       
+
+
 def graph_search(problem, verbose=False, debug=False):
     """graph_search(problem, verbose, debug) - Given a problem representation
     (instance of basicsearch_lib02.representation.Problem or derived class),
@@ -21,8 +23,6 @@ def graph_search(problem, verbose=False, debug=False):
         Number of moves to solution
         List of moves and resulting puzzle states
         Example:
-
-         # TODO BEWARE: [Y,X], Y is flipped.
 
             Solution in 25 moves        
             Initial state
@@ -72,30 +72,29 @@ def graph_search(problem, verbose=False, debug=False):
     path - list of actions to solve the problem or None if no solution was found
     nodes_explored - Number of nodes explored (dequeued from frontier)
     elapsed_s is the elapsed wall clock time performing the search
-
-
-    while:
-    node
-    for each action of node:
-
     """
+    timer = Timer()
     initial_state = problem.initial_state
     set_explored = Explored()
     queue_nodes = PriorityQueue()
     queue_nodes.f = lambda child_node: BreadthFirst.g(child_node) + BreadthFirst.h(child_node)
     queue_nodes.append(item=Node(problem=problem, state=initial_state, parent=None, action=None))
+    list_of_expanded_nodes = []
+    path = None
+    ii = 0  # number of nodes expanded.
 
     while True:
+        ii += 1
         # check if queue is empty
         if len(queue_nodes) == 0:
             # failure to find a solution.
-            return False
+            return None
         # current node
         current_node = queue_nodes.pop()
-        if verbose:
-            print(current_node.state)
         # add node state to explored.
         set_explored.add(current_node.state)
+        # add current node to list.
+        list_of_expanded_nodes.append(current_node.state)
         #  check for all valid moves:
         for action in TileBoard.get_actions(current_node.state):
             # action [y, x]
@@ -107,7 +106,30 @@ def graph_search(problem, verbose=False, debug=False):
                 added_to_queue = Node(problem=problem, state=child, parent=current_node, action=action)
                 queue_nodes.append(item=added_to_queue)
                 if problem.goal_test(child):
+                    child_node = Node(problem=problem, state=child, parent=current_node, action=action)
+                    path = Node.solution(child_node)
                     if verbose:
-                        print("child = ")
-                        print(child)
-                    return child
+                        print("\nSolution in %s moves" % str(len(path)))
+                        print("Number of nodes explored = ", str(ii))
+                        print("Final depth = ", child_node.depth)
+                        print("Computation time: %s (sec)\n" % timer.elapsed_s())
+                        for ii in range(0, len(path)):
+                            if ii == 0:
+                                print("Initial state=")
+                                print(print_node(initial_state) + "\n")
+                                next_node = initial_state
+                            if ii == len(path) - 1:
+                                print("Final child node=")
+                            print("Action = ", path[ii])
+                            next_node = next_node.move(offset=path[ii])
+                            print(print_node(next_node) + "\n")
+                    return path, list_of_expanded_nodes, timer.elapsed_s()
+
+
+def print_node(node):
+    n_side = int(math.sqrt(len(node.state_tuple())))
+    string = str(node.state_tuple()[: n_side])
+    for ii in range(1, n_side):
+        string += "\n"
+        string += str(node.state_tuple()[ii * n_side: (ii + 1) * n_side])
+    return string

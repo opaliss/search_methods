@@ -44,12 +44,12 @@ class BreadthFirst:
     ∀𝑛 𝑔′(𝑛) = depth(n) and h′(n)=k (k=0)"""
 
     @classmethod
-    def g(cls, childnode):
+    def g(cls, parent):
         """"g - cost from initial state to childnode
         constrained such that the last edge of the search space
         moves from parentnode to childnode via the specified action
         """
-        return childnode.depth
+        return parent.depth + 1
 
 
     @classmethod

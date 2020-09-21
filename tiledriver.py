@@ -28,18 +28,10 @@ import collections
 
 def driver(n, force_state=False):
     """
-    # TODO OPAL:
-                * newtonraphson.py. - DONE.
-                * Double check g,h BFS, DFS, A*. + TEST. -DONE.
+    # TODO: WHAT IS CURRENTLY MISSING:
+            1. BEING ABLE TO RUN THE SEARCH FOR DFS && A*.
+            2. PASS EVERYTHING TO A LOG FILE.
 
-    # TODO TOGETHER: STEP 2.
-                * problemsearch.py
-                * npuzzle.py
-
-    # TODO MARIO:
-                * step 3 - not yet ready.. tbd.
-                * outline step 2.
-                * step 1.
 
     step 1: create 31 puzzles. for now: create 1.
         input :
@@ -49,8 +41,7 @@ def driver(n, force_state=False):
             * check if board is solvable. TileBoard.solvable() -DONE
 
     step 2: solve the puzzle using BFS. Later on: DFS, A*.
-            * TODO: EDIT THE MOST IMPORTANT FILE: graph_search.
-            * verbose: make our lives better. print the current state in a human readable way.
+            * verbose: print the current state in a human readable way.
             * time the calculation.
             * record the length/ depth.
             * record the number of nodes expanded.
@@ -84,12 +75,14 @@ def driver(n, force_state=False):
     games = []
     for _ in range(n):
         board_height = random.randint(2, 4)
+        if force_state:
+            board_height = 3
         game_size = board_height ** 2 - 1
         if check_valid_n(game_size):
             problem = NPuzzle(n=game_size)
             if problem.solvable:
-                print(problem)
-                print("Is the state solved?", problem.goal_test(problem.initial_state))
+                print("Initial state=\n", problem)
+                print("\nIs the state solved?", problem.goal_test(problem.initial_state))
                 games.append(TileBoard(game_size))
                 graph_search(problem=problem, debug=True, verbose=True)
             else:
@@ -106,4 +99,4 @@ def check_valid_n(n):
 
 
 if __name__ == "__main__":
-    driver(n=1)
+    driver(n=1, force_state=True)

@@ -30,8 +30,16 @@ class NPuzzle(Problem):
         self.n_side = int(math.sqrt((n + 1)))
         self.initial_state = TileBoard(n=n)
         self.solvable = self.initial_state.solvable
-        self.h = BreadthFirst.h
-        self.g = BreadthFirst.g
+
+    @ staticmethod
+    def h(self):
+        """ return g"""
+        return BreadthFirst.h(self)
+
+    @ staticmethod
+    def g(parent, action, self):
+        """ return g"""
+        return BreadthFirst.g(parent)
 
     def actions(self, state):
         "actions(state) - find a set of actions applicable to specified state"
@@ -51,3 +59,5 @@ class NPuzzle(Problem):
             string += "\n"
             string += str(self.initial_state.state_tuple()[ii * self.n_side: (ii + 1) * self.n_side])
         return string
+
+
