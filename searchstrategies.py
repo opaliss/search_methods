@@ -106,15 +106,14 @@ class Manhattan:
         for ii in range(0, len(node_state)):
             if node_state[ii] is not None:
                 # find the manhattan distance to the correct location.
-                x_true = node_state[ii] % N_side
-                y_true = math.floor(((node_state[ii] - 1) / N_side)) + 1
-                x_curr = (ii + 1) % N_side
-                y_curr = math.floor((ii / N_side)) + 1
+                # x coordinates: 0, 1, 2.
+                x_true = (node_state[ii]-1) % N_side
+                # y coordinates: 0, 1, 2.
+                y_true = math.floor(((node_state[ii] - 1) / N_side))
 
-                if x_true == 0:
-                    x_true = N_side
-                if x_curr == 0:
-                    x_curr = N_side
+                # the current position of the tile. [x, y]
+                x_curr = ii % N_side
+                y_curr = math.floor((ii / N_side))
 
                 val += abs(x_true - x_curr) + abs(y_true - y_curr)
         return val
