@@ -27,19 +27,12 @@ class NPuzzle(Problem):
         # as if each entry was a keyword argument:
         #    e.g. foobar(arg1, arg2, …, argn, **kwargs).
         """
-        self.n_side = int(math.sqrt((n + 1)))
-        self.initial_state = TileBoard(n=n)
+        if force_state is not None:
+            self.initial_state = TileBoard(n=n)
+        else:
+            self.initial_state = TileBoard(n=n, force_state=force_state)
+
         self.solvable = self.initial_state.solvable
-
-    @ staticmethod
-    def h(self):
-        """ return g"""
-        return BreadthFirst.h(self)
-
-    @ staticmethod
-    def g(parent, action, self):
-        """ return g"""
-        return BreadthFirst.g(parent)
 
     def actions(self, state):
         "actions(state) - find a set of actions applicable to specified state"
@@ -52,12 +45,3 @@ class NPuzzle(Problem):
     def goal_test(self, state):
         "goal_test(state) - Is state a goal?"
         return TileBoard.solved(state)
-
-    def __str__(self):
-        string = str(self.initial_state.state_tuple()[: self.n_side])
-        for ii in range(1, self.n_side):
-            string += "\n"
-            string += str(self.initial_state.state_tuple()[ii * self.n_side: (ii + 1) * self.n_side])
-        return string
-
-

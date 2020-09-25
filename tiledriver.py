@@ -10,8 +10,7 @@ we will be subject to penalties as outlined in the course syllabus.
 Pair Programmer #1: Opal Issan, 09/15/2020
 Pair Programmer #2: Mario Inzunza, 09/15/2020
 
-driver for graph search problem
-
+driver for graph search problem.
 """
 
 from statistics import (mean, stdev)  # Only available in Python 3.4 and newer
@@ -26,67 +25,74 @@ from basicsearch_lib02.searchrep import *
 import collections
 
 
-def driver(n, force_state=False):
+def driver(n=8, force_state=False, repeat=1, verbose=False, log_file=True, print_res=False):
     """
-    # TODO: WHAT IS CURRENTLY MISSING:
-            1. BEING ABLE TO RUN THE SEARCH FOR DFS && A*.
-            2. PASS EVERYTHING TO A LOG FILE.
-
-
-    step 1: create 31 puzzles. for now: create 1.
-        input :
-            * n - where sqrt(n) = int. - create a function to make sure this holds. -DONE
-            * what is the range of n?
-            * get 31 n values from random generator.
-            * check if board is solvable. TileBoard.solvable() -DONE
-
-    step 2: solve the puzzle using BFS. Later on: DFS, A*.
-            * verbose: print the current state in a human readable way.
-            * time the calculation.
-            * record the length/ depth.
-            * record the number of nodes expanded.
-            * return the tuple of graph_search and save it for step 3.
-
     step 3: save solutions in log.txt file. (Mario)
             Solution includes:
             * length of plan (DEPTH.)
             * number of nodes expanded (number of states explored?)
             * time running.
 
-
-    # TODO: QUESTIONS FOR PROFESSOR ROCH:
-    1. Is n = 16 always?
-    2. Can you explain the comments in graph_search? why are there repeated numbers?
-     do we need to account for this?
-    3. Is there a range for n? if so, what is it?
-    4. What is the empty space and period in graph_search comments?
-    5. Is coordinate system in graph_search comments correct?
-
-    # TODO: COMMENTS TO SELF:
-    1. force_state is great for debugging.
-    2. Beware of the coordinate system used in graph_search.
-
-    # TODO: TESTING:
-    1. first, test for n = 4.
-    2. When implementing always add debug param and verbose to print behind the scenes.
+    :param print_res: If set to True, print overall stats from run.
+    :param log_file: If set to True, results will be printed in log.txt.
+    :param verbose: print results to screen. Default is False.
+    :param repeat: integer number that indicates the number of random N-puzzles generated.
+    :param force_state: If set True the problem will be solved using an initial state. Default is false.
+    :param n: number of tiles in the n-puzzle. Default is 8.
     """
 
-    # Generate 31 puzzles with 4, 9, or 16 squares
+    # a puzzle and solve it using 3 search methods.
+    search_algorithm_list = ["BFS", "DFS", "A*"]
+
+    # list of N-puzzles generated
     games = []
-    for _ in range(n):
-        board_height = random.randint(2, 4)
-        if force_state:
-            board_height = 3
-        game_size = board_height ** 2 - 1
-        if check_valid_n(game_size):
-            problem = NPuzzle(n=game_size)
-            if problem.solvable:
-                print("Initial state=\n", problem)
-                print("\nIs the state solved?", problem.goal_test(problem.initial_state))
-                games.append(TileBoard(game_size))
-                graph_search(problem=problem, debug=True, verbose=True)
+
+    for _ in range(repeat):
+
+        # check if input n is valid.
+        if check_valid_n(n):
+
+            if force_state:
+                # generate the N-puzzle using a known initial state.
+                problem = NPuzzle(n=n, force_state=force_state)
             else:
-                print("initial state is unsolvable. ")
+                problem = NPuzzle(n=n)
+
+            if problem.solvable:
+                # is the problem solvable? print to screen.
+                if print_res:
+                    print("\nIs the state solved?", problem.goal_test(problem.initial_state))
+
+                # if the problem is solvable then append the problem to list.
+                games.append(TileBoard(n))
+
+                for ii in range(len(search_algorithm_list)):
+
+                    # solve the same problem using BFS, DFS, and A*.
+                    search_method = search_algorithm_list[ii]
+
+                    # set the g and h functions in N-Puzzle.
+                    if search_method == "BFS":
+                        problem.g = lambda parent, action, node: BreadthFirst.g(parent=parent)
+                        problem.h = lambda node: BreadthFirst.h(searchnode=node)
+                    if search_method == "DFS":
+                        problem.g = lambda parent, action, node: DepthFirst.g(parent=parent)
+                        problem.h = lambda node: DepthFirst.h(searchnode=node)
+                    if search_method == "A*":
+                        problem.g = lambda parent, action, node: Manhattan.g(parent=parent)
+                        problem.h = lambda node: Manhattan.h(node)
+
+                    # call the search algorithm.
+                    path, list_of_expanded_nodes, time = graph_search(problem=problem, debug=False, verbose=verbose)
+
+                    if print_res:
+                        # print the type of search method.
+                        print(search_method)
+                        print("\nSolution in %s moves" % str(len(path)))
+                        print("Number of nodes expanded = ", len(list_of_expanded_nodes))
+                        print("Computation time: %s (sec)\n" % time)
+            else:
+                print("Initial state is unsolvable. ")
         else:
             print("n is not valid.")
 
@@ -99,4 +105,4 @@ def check_valid_n(n):
 
 
 if __name__ == "__main__":
-    driver(n=1, force_state=True)
+    driver(n=8, repeat=1, force_state=False, verbose=False, log_file=False, print_res=True)

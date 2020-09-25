@@ -51,7 +51,6 @@ class BreadthFirst:
         """
         return parent.depth + 1
 
-
     @classmethod
     def h(cls, searchnode):
         """h - heuristic value"""
@@ -63,12 +62,12 @@ class DepthFirst:
     ∀𝑛 𝑔′(𝑛) = k and h′(n)=−depth(n) (k=0)"""
 
     @classmethod
-    def g(cls, parentnode):
+    def g(cls, parent):
         """"g - cost from initial state to childnode
         constrained such that the last edge of the search space
         moves from parentnode to childnode via the specified action
         """
-        return -(BreadthFirst.g(parentnode))
+        return -(BreadthFirst.g(parent))
 
     @classmethod
     def h(cls, searchnode):
@@ -80,34 +79,42 @@ class Manhattan:
     """Manhattan - A* heuristic with manhattan distance, and a cost of 2. """
 
     @classmethod
-    def g(cls, parentnode):
+    def g(cls, parent):
         """"g - cost from initial state to childnode
         constrained such that the last edge of the search space
         moves from parentnode to childnode via the specified action
         """
-        return BreadthFirst.g(parentnode)
+        return parent.depth + 2
 
     @classmethod
-    def h(cls, child_state):
+    def h(cls, node):
         """h - heuristic value. Manhattan distance. The sum of distance of each tile from
-        it's goal position.
-        # TODO: make sure searchnode.state is a tuple/list. ex: [2,1,3,6,4,5,7,.,8]
-        # TODO: Here I assume searchnode is an object of Node class. """
-        diff = 0
-        for ii in range(0, len(child_state.state)):
-            if child_state.state[ii] != '.':
-                """ find the manhattan distance to the correct location. """
-                N = len(child_state.state)
-                N_side = math.sqrt(N)
-                x_true = child_state.state[ii] % N_side
-                y_true = math.floor(((child_state.state[ii] - 1) / N_side)) + 1
-                x_curr = (ii+1) % N_side
-                y_curr = math.floor((ii/N_side)) + 1
+        it's goal position."""
+
+        # the returned value initialization.
+        val = 0
+
+        # get the current node state as a tuple/list.
+        node_state = node.state.state_tuple()
+
+        # total number of tiles.
+        N = len(node_state)
+
+        # length of the puzzle side.
+        N_side = math.sqrt(N)
+
+        for ii in range(0, len(node_state)):
+            if node_state[ii] is not None:
+                # find the manhattan distance to the correct location.
+                x_true = node_state[ii] % N_side
+                y_true = math.floor(((node_state[ii] - 1) / N_side)) + 1
+                x_curr = (ii + 1) % N_side
+                y_curr = math.floor((ii / N_side)) + 1
 
                 if x_true == 0:
                     x_true = N_side
                 if x_curr == 0:
                     x_curr = N_side
 
-                diff += abs(x_true - x_curr) + abs(y_true - y_curr)
-        return diff
+                val += abs(x_true - x_curr) + abs(y_true - y_curr)
+        return val

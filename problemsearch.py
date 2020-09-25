@@ -8,7 +8,6 @@ from basicsearch_lib02.timer import Timer
 from basicsearch_lib02.tileboard import TileBoard
 from explored import Explored
 import math
-from searchstrategies import BreadthFirst, DepthFirst, Manhattan
 
 
 def graph_search(problem, verbose=False, debug=False):
@@ -73,11 +72,10 @@ def graph_search(problem, verbose=False, debug=False):
     nodes_explored - Number of nodes explored (dequeued from frontier)
     elapsed_s is the elapsed wall clock time performing the search
     """
-    timer = Timer()
+    timer = Timer()  # start the timer.
     initial_state = problem.initial_state
-    set_explored = Explored()
-    queue_nodes = PriorityQueue()
-    queue_nodes.f = lambda child_node: BreadthFirst.g(child_node) + BreadthFirst.h(child_node)
+    set_explored = Explored()   # create a hashtable.
+    queue_nodes = PriorityQueue()  # queue with frontier nodes.
     queue_nodes.append(item=Node(problem=problem, state=initial_state, parent=None, action=None))
     list_of_expanded_nodes = []
     path = None
@@ -110,26 +108,21 @@ def graph_search(problem, verbose=False, debug=False):
                     path = Node.solution(child_node)
                     if verbose:
                         print("\nSolution in %s moves" % str(len(path)))
-                        print("Number of nodes explored = ", str(ii))
+                        print("Number of nodes expanded = ", len(list_of_expanded_nodes))
                         print("Final depth = ", child_node.depth)
                         print("Computation time: %s (sec)\n" % timer.elapsed_s())
                         for ii in range(0, len(path)):
                             if ii == 0:
                                 print("Initial state=")
-                                print(print_node(initial_state) + "\n")
+                                print(initial_state)
+                                print("\n")
                                 next_node = initial_state
                             if ii == len(path) - 1:
                                 print("Final child node=")
                             print("Action = ", path[ii])
                             next_node = next_node.move(offset=path[ii])
-                            print(print_node(next_node) + "\n")
+                            print(next_node)
+                            print("\n")
                     return path, list_of_expanded_nodes, timer.elapsed_s()
 
 
-def print_node(node):
-    n_side = int(math.sqrt(len(node.state_tuple())))
-    string = str(node.state_tuple()[: n_side])
-    for ii in range(1, n_side):
-        string += "\n"
-        string += str(node.state_tuple()[ii * n_side: (ii + 1) * n_side])
-    return string
