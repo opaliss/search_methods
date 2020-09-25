@@ -77,7 +77,6 @@ def graph_search(problem, verbose=False, debug=False):
     set_explored = Explored()   # create a hashtable.
     queue_nodes = PriorityQueue()  # queue with frontier nodes.
     queue_nodes.append(item=Node(problem=problem, state=initial_state, parent=None, action=None))
-    list_of_expanded_nodes = []
     path = None
     ii = 0  # number of nodes expanded.
 
@@ -91,8 +90,6 @@ def graph_search(problem, verbose=False, debug=False):
         current_node = queue_nodes.pop()
         # add node state to explored.
         set_explored.add(current_node.state)
-        # add current node to list.
-        list_of_expanded_nodes.append(current_node.state)
         #  check for all valid moves:
         for action in TileBoard.get_actions(current_node.state):
             # action [y, x]
@@ -108,7 +105,7 @@ def graph_search(problem, verbose=False, debug=False):
                     path = Node.solution(child_node)
                     if verbose:
                         print("\nSolution in %s moves" % str(len(path)))
-                        print("Number of nodes expanded = ", len(list_of_expanded_nodes))
+                        print("Number of nodes expanded = ", ii)
                         print("Final depth = ", child_node.depth)
                         print("Computation time: %s (sec)\n" % timer.elapsed_s())
                         for ii in range(0, len(path)):
@@ -123,6 +120,6 @@ def graph_search(problem, verbose=False, debug=False):
                             next_node = next_node.move(offset=path[ii])
                             print(next_node)
                             print("\n")
-                    return path, list_of_expanded_nodes, timer.elapsed_s()
+                    return path, ii, timer.elapsed_s()
 
 

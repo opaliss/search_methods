@@ -115,5 +115,7 @@ class Manhattan:
                 x_curr = ii % N_side
                 y_curr = math.floor((ii / N_side))
 
+                # compute the manhattan distance.
                 val += abs(x_true - x_curr) + abs(y_true - y_curr)
+
         return val

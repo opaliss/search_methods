@@ -80,16 +80,16 @@ def driver(n=8, force_state=False, repeat=1, verbose=False, log_file=True, print
                         problem.h = lambda node: DepthFirst.h(searchnode=node)
                     if search_method == "A*":
                         problem.g = lambda parent, action, node: Manhattan.g(parent=parent)
-                        problem.h = lambda node: Manhattan.h(node)
+                        problem.h = lambda node: Manhattan.h(node=node)
 
                     # call the search algorithm.
-                    path, list_of_expanded_nodes, time = graph_search(problem=problem, debug=False, verbose=verbose)
+                    path, ii, time = graph_search(problem=problem, debug=False, verbose=verbose)
 
                     if print_res:
                         # print the type of search method.
                         print(search_method)
                         print("\nSolution in %s moves" % str(len(path)))
-                        print("Number of nodes expanded = ", len(list_of_expanded_nodes))
+                        print("Number of nodes expanded = ", ii)
                         print("Computation time: %s (sec)\n" % time)
             else:
                 print("Initial state is unsolvable. ")

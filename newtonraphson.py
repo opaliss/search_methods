@@ -34,7 +34,7 @@ def NewtonRaphson(fpoly, a, tolerance=1e-05, more_info=False):
             ii += 1
 
         if more_info:  # return more information about the iterative calculation.
-            return x,  polyval(fpoly, x), ii
+            return x, polyval(fpoly, x), ii
         else:
             return x
 

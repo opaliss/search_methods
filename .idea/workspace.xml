@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed82740c-2296-405f-bb40-7ed0bfbb5fc0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newtonraphson.py" beforeDir="false" afterPath="$PROJECT_DIR$/newtonraphson.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problemsearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/problemsearch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchstrategies.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchstrategies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiledriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiledriver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601008670214</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix bug in h function for A*.">
+      <created>1601009374828</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1601009374828</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +277,8 @@
     <MESSAGE value="Push changes made Sunday." />
     <MESSAGE value="Everything is now working for BFS, yay!" />
     <MESSAGE value="Everything is ready besides creating a log file. Mario will make the change and push it as the final changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Everything is ready besides creating a log file. Mario will make the change and push it as the final changes." />
+    <MESSAGE value="fix bug in h function for A*." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug in h function for A*." />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600361714902">
@@ -279,42 +291,42 @@
     </state>
     <state x="101" y="369" key="#xdebugger.evaluate/0.23.1920.988@0.23.1920.988" timestamp="1601005336906" />
     <state x="97" y="273" key="#xdebugger.evaluate/0.23.1920.990@0.23.1920.990" timestamp="1600407967485" />
-    <state x="797" y="23" key="CommitChangelistDialog2" timestamp="1601008668753">
+    <state x="797" y="23" key="CommitChangelistDialog2" timestamp="1601009374450">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state x="975" y="169" key="CommitChangelistDialog2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155399348" />
     <state x="531" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1600236853837" />
-    <state x="797" y="23" key="CommitChangelistDialog2/0.23.1920.988@0.23.1920.988" timestamp="1601008668753" />
+    <state x="797" y="23" key="CommitChangelistDialog2/0.23.1920.988@0.23.1920.988" timestamp="1601009374450" />
     <state x="797" y="23" key="CommitChangelistDialog2/0.23.1920.990@0.23.1920.990" timestamp="1600383956919" />
     <state width="813" height="466" key="DebuggerActiveHint" timestamp="1600643739499">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state width="813" height="466" key="DebuggerActiveHint/0.23.1920.988@0.23.1920.988" timestamp="1600643739499" />
-    <state width="1500" height="355" key="GridCell.Tab.0.bottom" timestamp="1601009174540">
+    <state width="1500" height="262" key="GridCell.Tab.0.bottom" timestamp="1601009753678">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
-    <state width="1500" height="355" key="GridCell.Tab.0.bottom/0.23.1920.988@0.23.1920.988" timestamp="1601009174540" />
+    <state width="1500" height="262" key="GridCell.Tab.0.bottom/0.23.1920.988@0.23.1920.988" timestamp="1601009753678" />
     <state width="1126" height="330" key="GridCell.Tab.0.bottom/0.23.1920.990@0.23.1920.990" timestamp="1600409083761" />
     <state width="1899" height="216" key="GridCell.Tab.0.bottom/0.23.1920.991@0.23.1920.991" timestamp="1600794083062" />
     <state width="1899" height="272" key="GridCell.Tab.0.bottom/0.23.1920.993@0.23.1920.993" timestamp="1600794166069" />
-    <state width="1500" height="355" key="GridCell.Tab.0.center" timestamp="1601009174539">
+    <state width="1500" height="262" key="GridCell.Tab.0.center" timestamp="1601009753676">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
-    <state width="1500" height="355" key="GridCell.Tab.0.center/0.23.1920.988@0.23.1920.988" timestamp="1601009174539" />
+    <state width="1500" height="262" key="GridCell.Tab.0.center/0.23.1920.988@0.23.1920.988" timestamp="1601009753676" />
     <state width="1126" height="330" key="GridCell.Tab.0.center/0.23.1920.990@0.23.1920.990" timestamp="1600409083760" />
     <state width="1899" height="216" key="GridCell.Tab.0.center/0.23.1920.991@0.23.1920.991" timestamp="1600794082964" />
     <state width="1899" height="272" key="GridCell.Tab.0.center/0.23.1920.993@0.23.1920.993" timestamp="1600794165886" />
-    <state width="1500" height="355" key="GridCell.Tab.0.left" timestamp="1601009174539">
+    <state width="1500" height="262" key="GridCell.Tab.0.left" timestamp="1601009753676">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state width="1899" height="272" key="GridCell.Tab.0.left/0.0.1920.1080@0.23.1920.993" timestamp="1600794165708" />
-    <state width="1500" height="355" key="GridCell.Tab.0.left/0.23.1920.988@0.23.1920.988" timestamp="1601009174539" />
+    <state width="1500" height="262" key="GridCell.Tab.0.left/0.23.1920.988@0.23.1920.988" timestamp="1601009753676" />
     <state width="1126" height="330" key="GridCell.Tab.0.left/0.23.1920.990@0.23.1920.990" timestamp="1600409083759" />
     <state width="1899" height="216" key="GridCell.Tab.0.left/0.23.1920.991@0.23.1920.991" timestamp="1600794068770" />
-    <state width="1500" height="355" key="GridCell.Tab.0.right" timestamp="1601009174540">
+    <state width="1500" height="262" key="GridCell.Tab.0.right" timestamp="1601009753677">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
-    <state width="1500" height="355" key="GridCell.Tab.0.right/0.23.1920.988@0.23.1920.988" timestamp="1601009174540" />
+    <state width="1500" height="262" key="GridCell.Tab.0.right/0.23.1920.988@0.23.1920.988" timestamp="1601009753677" />
     <state width="1126" height="330" key="GridCell.Tab.0.right/0.23.1920.990@0.23.1920.990" timestamp="1600409083760" />
     <state width="1899" height="216" key="GridCell.Tab.0.right/0.23.1920.991@0.23.1920.991" timestamp="1600794082971" />
     <state width="1899" height="272" key="GridCell.Tab.0.right/0.23.1920.993@0.23.1920.993" timestamp="1600794165955" />
@@ -346,11 +358,11 @@
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state x="732" y="235" key="RollbackChangesDialog/0.23.1920.988@0.23.1920.988" timestamp="1600639834621" />
-    <state x="552" y="263" key="Vcs.Push.Dialog.v2" timestamp="1600651728292">
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2" timestamp="1601009419532">
       <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/-3840.-480.1280.707/0.0.1920.1040@0.0.1920.1040" timestamp="1600155404783" />
-    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.23.1920.988@0.23.1920.988" timestamp="1600651728292" />
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.23.1920.988@0.23.1920.988" timestamp="1601009419532" />
     <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.23.1920.990@0.23.1920.990" timestamp="1600385654718" />
     <state x="858" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1600637656244">
       <screen x="0" y="23" width="1920" height="988" />
